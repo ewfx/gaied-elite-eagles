@@ -12,7 +12,7 @@
 - [Team](#team)
 
 ---
-# AI-Powered Email Processing System
+# GenAI-Powered Email Processing System
 
 ## 🎯 Introduction
 Introduction
