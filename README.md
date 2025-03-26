@@ -15,8 +15,6 @@
 # GenAI-Powered Email Processing System
 
 ## 🎯 Introduction
-Introduction
-
 This document provides a comprehensive guide for developers seeking to understand, utilize, and extend the AI-powered email processing system. The system is designed to extract key information from emails in various formats (.eml, .pdf, .docx) and classify them based on their content.
 
 ## 🎥 Demo
