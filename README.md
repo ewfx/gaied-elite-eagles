@@ -58,7 +58,71 @@ The system follows a modular AI pipeline architecture:
  6. Key Attributes Extraction: Uses the Gemini API to extract specific data from the email body (dates, amounts, etc.).   
  7. Content Classification: Employs the Gemini API to classify emails into request types and sub request types.  
 
-Output: JSON Response
+## 🛠️ How We Built It
+## Dependencies
+* Python 3.12.6
+* pip (Package Installer for Python)
+* A virtual environment (recommended)
+
+## Setup
+
+1.  **Clone the repository:**
+
+    ```bash
+    git clone https://github.com/ewfx/gaied-elite-eagles
+    cd Email_Classification_Project
+    ```
+
+2.  **Create and activate a virtual environment:**
+
+    ```bash
+    C:\Syed\Workspace\Hackathon_2025\Email_Classification_Project>python --version
+    Python 3.12.6
+
+    C:\Syed\Workspace\Hackathon_2025\Email_Classification_Project>pip --version
+    pip 24.2 from C:\Syed\Workspace\Hackathon_2025\python-3.12.6\Lib\site-packages\pip (python 3.12)
+
+    C:\Syed\Workspace\Hackathon_2025\Email_Classification_Project>python -m venv my_env
+
+    C:\Syed\Workspace\Hackathon_2025\Email_Classification_Project>my_env\Scripts\activate
+
+    (my_env) C:\Syed\Workspace\Hackathon_2025\Email_Classification_Project>
+    ```
+
+3.  **Install package dependencies:**
+
+    ```bash
+    pip install google-generativeai
+    pip install requests
+    pip install pandas
+    pip install matplotlib
+    pip install requests
+    pip install transformers
+    pip install torch PyPDF2 pytesseract pdf2image
+    pip install openai
+    pip install spacy
+
+    ```
+  
+4.  **Install Tesseract OCR (for PDF text extraction):**
+
+    * You'll need to install Tesseract OCR separately.
+    * **Windows:** Download the installer from [https://github.com/UB-Mannheim/tesseract/wiki](https://github.com/UB-Mannheim/tesseract/wiki) and add the Tesseract executable to your system's PATH environment variable.
+   
+5.  **Configure API Keys:**
+
+    * Obtain the necessary API keys from Google Generative AI,and add the API key to the `genai_email_classifaction_engine.py` file
+
+6.  **Run the application:**
+
+    ```bash
+    python src/main/genai_email_classifaction_engine.py #or however you start your program.
+    ```
+## Output
+
+The system outputs extracted data and classification results in JSON format.
+
+JSON Response : Email Classification
 ```bash
 {
     "Request Type": "Money Movement-Inbound",
@@ -99,7 +163,7 @@ Output: JSON Response
 }
 ```
 
-
+JSOPN Response : Service Intake Request
 
 ```bash
         Service Intake Response (from create_service_intake_request_gemini)
@@ -137,70 +201,6 @@ Output: JSON Response
             }
         }
 ```
-## 🛠️ How We Built It
-## Dependencies
-* Python 3.12.6
-* pip (Package Installer for Python)
-* A virtual environment (recommended)
-
-## Setup
-
-1.  **Clone the repository:**
-
-    ```bash
-    git clone https://github.com/ewfx/gaied-elite-eagles
-    cd Email_Classification_Project
-    ```
-
-2.  **Create and activate a virtual environment:**
-
-    ```bash
-    C:\Syed\Workspace\Hackathon_2025\Email_Classification_Project>python --version
-    Python 3.12.6
-
-    C:\Syed\Workspace\Hackathon_2025\Email_Classification_Project>pip --version
-    pip 24.2 from C:\Syed\Workspace\Hackathon_2025\python-3.12.6\Lib\site-packages\pip (python 3.12)
-
-    C:\Syed\Workspace\Hackathon_2025\Email_Classification_Project>python -m venv my_env
-
-    C:\Syed\Workspace\Hackathon_2025\Email_Classification_Project>my_env\Scripts\activate
-
-    (my_env) C:\Syed\Workspace\Hackathon_2025\Email_Classification_Project>
-    ```
-
-3.  **Install dependencies:**
-
-    ```bash
-    pip install google-generativeai
-    pip install requests
-    pip install pandas
-    pip install matplotlib
-    pip install requests
-    pip install transformers
-    pip install torch PyPDF2 pytesseract pdf2image
-    pip install openai
-    pip install spacy
-
-    ```
-  
-4.  **Install Tesseract OCR (for PDF text extraction):**
-
-    * You'll need to install Tesseract OCR separately.
-    * **Windows:** Download the installer from [https://github.com/UB-Mannheim/tesseract/wiki](https://github.com/UB-Mannheim/tesseract/wiki) and add the Tesseract executable to your system's PATH environment variable.
-   
-5.  **Configure API Keys:**
-
-    * Obtain the necessary API keys from Google Generative AI,and add the API key to the `genai_email_classifaction_engine.py` file
-
-6.  **Run the application:**
-
-    ```bash
-    python src/main/genai_email_classifaction_engine.py #or however you start your program.
-    ```
-## Output
-
-The system outputs extracted data and classification results in JSON format.
-
 ## File Details
 
 * `genai_email_classifaction_engine.py`: Contains the main email processing logic.
