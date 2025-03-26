@@ -21,37 +21,122 @@ This document provides a comprehensive guide for developers seeking to understan
 🔗 [Live Demo](#) (if applicable)  
 📹 [Video Demo](#) (if applicable)  
 
-🖼️ Screenshots:
+## 🖼️ Screenshots:
 
 ![Screenshot](artifacts/arch/Email_Classifier_FlowDiagram.png)
 
 ## 💡 Inspiration
-What inspired you to create this project? Describe the problem you're solving.
+Business Description:
+Our AI-powered Email Processing System solves critical financial communication challenges by automatically classifying, extracting, and routing emails containing complex financial information. The solution dramatically reduces manual processing time, minimizes human error, and ensures consistent handling of diverse email communications across financial operations.
+Technical Description:
+A Python-based, AI-driven email processing pipeline that leverages Google Generative AI and OCR technologies to:
+
+Ingest multi-format documents (EML, PDF, DOCX)
+Extract text and image-based content
+Classify emails using machine learning
+Generate structured service intake requests
+Support intelligent routing and attribute extraction
+
+Key Technical Components:
+
+Language: Python
+AI Engine: Google Generative AI (Gemini)
+OCR: Pytesseract
+Supported Formats: EML, PDF, DOCX
+Output: Structured JSON
+Processing: Modular, extensible pipeline
 
 ## ⚙️ What It Does
 Solution: 
 The system follows a modular AI pipeline architecture:
 
-Ingestion Collection Stage : Gathers email data from different sources.
-Preprocessing: processs the emails in various formats (.eml, .pdf, .docx) and extracts the email text
-Metadata Extraction: Extracts email headers (sender, recipient, etc.).   
-Email Signature Detection: Identifies and extracts email signatures.  
-Confidence Score
-Key Attributes Extraction: Uses the Gemini API to extract specific data from the email body (dates, amounts, etc.).   
-Content Classification: Employs the Gemini API to classify emails into request types and sub request types.  
+ 1. Ingestion Collection Stage : Gathers email data from different sources.
+ 2. Preprocessing: processs the emails in various formats (.eml, .pdf, .docx) and extracts the email text
+ 3. Metadata Extraction: Extracts email headers (sender, recipient, etc.).   
+ 4. Email Signature Detection: Identifies and extracts email signatures.  
+ 5. Confidence Score
+ 6. Key Attributes Extraction: Uses the Gemini API to extract specific data from the email body (dates, amounts, etc.).   
+ 7. Content Classification: Employs the Gemini API to classify emails into request types and sub request types.  
 
-Output:
-
+Output: JSON Response
+```bash
 {
-  "Metadata": {"From": "sender@example.com", "To": "recipient@example.com", ...},
-  "Subject": "Request Details",
-  "Body": "Dear team, please process this request...",
-  "Signature": {"Signature Type": "Regards", "Signature Content": "Jane Doe"},
-  "Attributes": {"Transaction Date": "15-Mar-2025", "Amount": "USD 5000"},
-  "Request Type": "Document Request",
-  "Sub-Request Type": "Confirmation"
+    "Request Type": "Money Movement-Inbound",
+    "Sub-Request Type": "Principal",
+    "Confidence": 0.95,
+    "Metadata": {
+        "From": "Bank of America <notifications@bofa.com>",
+        "To": "Wells Fargo National Association <transactions@wellsfargo.com>",
+        "Subject": "Loan Repayment Notification - John Cena L.P.",
+        "Date": "Fri, 10 Nov 2023 09:00:00 -0500",
+        "Content-Type": "text/plain; charset=\"UTF-8\""
+    },
+    "Signature": {
+        "Signature Type": "Best regards",
+        "Signature Content": "Loan Processing Team  \nBank of America"
+    },
+    "Attributes": {
+        "Loan Repayment Date": "10-Nov-2023",
+        "Repayment Amount": "USD 10,000,000.00",
+        "Deal CUSIP": "123456789",
+        "Deal ISIN": "US1234567890",
+        "Facility CUSIP": "987654321",
+        "Facility ISIN": "US9876543210",
+        "Lender MEI": "ABCD1234",
+        "Borrower": "John Cena L.P.",
+        "Previous Global Principal Balance": "USD 50,000,000.00",
+        "New Global Principal Balance": "USD 40,000,000.00",
+        "Recipient Bank Name": "Wells Fargo National Association",
+        "Recipient Bank ABA Number": "123456789",
+        "Recipient Bank Account No": "987654321",
+        "Recipient Bank Reference": "LOAN-123456",
+        "Term Option": "SOFR (UST)",
+        "Sender Bank Name": "Bank of America",
+        "Phone": "(123)-456-7890",
+        "Fax": "(987)-654-3210",
+        "Email": "loanprocessing@wellsfargo.com"
+    }
 }
+```
 
+
+
+```bash
+        Service Intake Response (from create_service_intake_request_gemini)
+        Service Intake Request:
+        {
+            "Request Type": "Money Movement-Inbound",
+            "Sub-Request Type": "Principal",
+            "Assigned To": "Loan Processing Team",
+            "Summary": "Loan repayment of USD 10,000,000.00 for John Cena L.P. (Deal CUSIP: 123456789) effective 10-Nov-2023",
+            "Priority": "Medium",
+            "Description": "Notification of a loan repayment of USD 10,000,000.00 from John Cena L.P., effective 10-Nov-2023.  Confirmation of receipt and processing is requested.",
+            "Details": {
+                "Sender": "Bank of America <notifications@bofa.com>",
+                "Recipient": "Wells Fargo National Association <transactions@wellsfargo.com>",
+                "Subject": "Loan Repayment Notification - John Cena L.P.",
+                "Loan Repayment Date": "10-Nov-2023",
+                "Repayment Amount": "USD 10,000,000.00",
+                "Deal CUSIP": "123456789",
+                "Deal ISIN": "US1234567890",
+                "Facility CUSIP": "987654321",
+                "Facility ISIN": "US9876543210",
+                "Lender MEI": "ABCD1234",
+                "Borrower": "John Cena L.P.",
+                "Previous Global Principal Balance": "USD 50,000,000.00",
+                "New Global Principal Balance": "USD 40,000,000.00",
+                "Recipient Bank Name": "Wells Fargo National Association",
+                "Recipient Bank ABA Number": "123456789",
+                "Recipient Bank Account No": "987654321",
+                "Recipient Bank Reference": "LOAN-123456",
+                "Term Option": "SOFR (UST)",
+                "Sender Bank Name": "Bank of America",
+                "Phone": "(123)-456-7890",
+                "Fax": "(987)-654-3210",
+                "Email": "loanprocessing@wellsfargo.com"
+            }
+        }
+```
 ## 🛠️ How We Built It
 ## Dependencies
 * Python 3.12.6
