@@ -1,0 +1,93 @@
+(my_env) C:\Syed\Workspace\Hackathon_2025\Email_Classification_Project>python genai_email_classifaction_engine.py
+Enter the path to your email file (.eml, .pdf, or .docx): C:\Syed\Workspace\Hackathon_2025\Email_Classification_Project\main_email.eml
+2025-03-26 20:54:11,638 - INFO - Running the email classifier pipeline...
+2025-03-26 20:54:11,639 - INFO - Processing file: C:\Syed\Workspace\Hackathon_2025\Email_Classification_Project\main_email.eml
+2025-03-26 20:54:11,639 - INFO - Detected .eml format. Extracting email components...
+2025-03-26 20:54:11,652 - INFO - Email file loaded successfully.
+2025-03-26 20:54:11,653 - INFO - Extracting email metadata...
+2025-03-26 20:54:11,653 - INFO - Email metadata extracted successfully.
+2025-03-26 20:54:11,654 - INFO - Searching for email signature...
+2025-03-26 20:54:11,654 - INFO - Signature extracted: Best regards
+Classified Email JSON:
+{
+    "Request Type": "Money Movement-Inbound",
+    "Sub-Request Type": "Principal",
+    "Confidence": 0.95,
+    "Metadata": {
+        "From": "Bank of America <notifications@bofa.com>",
+        "To": "Wells Fargo National Association <transactions@wellsfargo.com>",
+        "Cc": null,
+        "Bcc": null,
+        "Subject": "Loan Repayment Notification - John Cena L.P.",
+        "Date": "Fri, 10 Nov 2023 09:00:00 -0500",
+        "Message-ID": null,
+        "In-Reply-To": null,
+        "References": null,
+        "Content-Type": "text/plain; charset=\"UTF-8\"",
+        "Content-Transfer-Encoding": null,
+        "Return-Path": null
+    },
+    "Signature": {
+        "Signature Type": "Best regards",
+        "Signature Content": "Loan Processing Team  \nBank of America"
+    },
+    "Attributes": {
+        "Loan Repayment Date": "10-Nov-2023",
+        "Repayment Amount": "USD 10,000,000.00",
+        "Deal CUSIP": "123456789",
+        "Deal ISIN": "US1234567890",
+        "Facility CUSIP": "987654321",
+        "Facility ISIN": "US9876543210",
+        "Lender MEI": "ABCD1234",
+        "Borrower": "John Cena L.P.",
+        "Previous Global Principal Balance": "USD 50,000,000.00",
+        "New Global Principal Balance": "USD 40,000,000.00",
+        "Recipient Bank Name": "Wells Fargo National Association",
+        "Recipient Bank ABA Number": "123456789",
+        "Recipient Bank Account No": "987654321",
+        "Recipient Bank Reference": "LOAN-123456",
+        "Term Option": "SOFR (UST)",
+        "Sender Bank Name": "Bank of America",
+        "Phone": "(123)-456-7890",
+        "Fax": "(987)-654-3210",
+        "Email": "loanprocessing@wellsfargo.com"
+    }
+}
+2025-03-26 20:54:23,319 - INFO - Service intake request generated successfully.
+
+Service Intake Request:
+{
+    "Request Type": "Money Movement-Inbound",
+    "Sub-Request Type": "Principal",
+    "Assigned To": "Loan Processing Team",
+    "Summary": "Loan repayment of USD 10,000,000.00 for John Cena L.P. (Deal CUSIP: 123456789) effective 10-Nov-2023",
+    "Priority": "Medium",
+    "Description": "Notification of a loan repayment of USD 10,000,000.00 from John Cena L.P., effective 10-Nov-2023.  Confirmation of receipt and processing is requested.",
+    "Details": {
+        "Sender": "Bank of America <notifications@bofa.com>",
+        "Recipient": "Wells Fargo National Association <transactions@wellsfargo.com>",
+        "Subject": "Loan Repayment Notification - John Cena L.P.",
+        "Loan Repayment Date": "10-Nov-2023",
+        "Repayment Amount": "USD 10,000,000.00",
+        "Deal CUSIP": "123456789",
+        "Deal ISIN": "US1234567890",
+        "Facility CUSIP": "987654321",
+        "Facility ISIN": "US9876543210",
+        "Lender MEI": "ABCD1234",
+        "Borrower": "John Cena L.P.",
+        "Previous Global Principal Balance": "USD 50,000,000.00",
+        "New Global Principal Balance": "USD 40,000,000.00",
+        "Recipient Bank Name": "Wells Fargo National Association",
+        "Recipient Bank ABA Number": "123456789",
+        "Recipient Bank Account No": "987654321",
+        "Recipient Bank Reference": "LOAN-123456",
+        "Term Option": "SOFR (UST)",
+        "Sender Bank Name": "Bank of America",
+        "Phone": "(123)-456-7890",
+        "Fax": "(987)-654-3210",
+        "Email": "loanprocessing@wellsfargo.com"
+    }
+}
+2025-03-26 20:54:23,322 - INFO - Outputs saved to email_classification.json and service_intake_request.json
+
+(my_env) C:\Syed\Workspace\Hackathon_2025\Email_Classification_Project>

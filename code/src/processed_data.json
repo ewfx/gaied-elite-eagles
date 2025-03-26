@@ -1,0 +1,38 @@
+{
+    "attributes": {
+        "Borrower": "John Cena L.P.",
+        "Deal CUSIP": "123456789",
+        "Deal ISIN": "US1234567890",
+        "Email Date": "10 Nov 2023",
+        "Facility CUSIP": "987654321",
+        "Facility ISIN": "US9876543210",
+        "Fax": "(987)-654-3210",
+        "Lender MEI": "ABCD1234",
+        "Loan Repayment Date": "10-Nov-2023",
+        "New Global Principal Balance": "USD 40,000,000.00",
+        "Phone": "(123)-456-7890",
+        "Previous Global Principal Balance": "USD 50,000,000.00",
+        "Recipient ABA Number": "123456789",
+        "Recipient Account No": "987654321",
+        "Recipient Bank Name": "Wells Fargo National Association",
+        "Recipient Email": "loanprocessing@wellsfargo.com",
+        "Reference": "LOAN-123456",
+        "Repayment Amount": "USD 10,000,000.00",
+        "Sender Bank Name": "Bank of America",
+        "Term Option": "SOFR (UST)"
+    },
+    "confidence": 0.95,
+    "filename": "email_sample.pdf",
+    "metadata": {
+        "Date": "Unknown",
+        "From": "Unknown",
+        "Subject": "PDF Document",
+        "To": "Unknown"
+    },
+    "request_type": "Money Movement-Inbound",
+    "signature": {
+        "Signature Content": "Loan Processing Team \n Bank of America",
+        "Signature Type": "Best regards"
+    },
+    "sub_request_type": "Principal"
+}

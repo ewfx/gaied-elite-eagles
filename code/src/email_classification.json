@@ -1,0 +1,44 @@
+{
+    "Request Type": "Money Movement-Inbound",
+    "Sub-Request Type": "Principal",
+    "Confidence": 0.95,
+    "Metadata": {
+        "From": "Bank of America <notifications@bofa.com>",
+        "To": "Wells Fargo National Association <transactions@wellsfargo.com>",
+        "Cc": null,
+        "Bcc": null,
+        "Subject": "Loan Repayment Notification - John Cena L.P.",
+        "Date": "Fri, 10 Nov 2023 09:00:00 -0500",
+        "Message-ID": null,
+        "In-Reply-To": null,
+        "References": null,
+        "Content-Type": "text/plain; charset=\"UTF-8\"",
+        "Content-Transfer-Encoding": null,
+        "Return-Path": null
+    },
+    "Signature": {
+        "Signature Type": "Best regards",
+        "Signature Content": "Loan Processing Team  \nBank of America"
+    },
+    "Attributes": {
+        "Loan Repayment Date": "10-Nov-2023",
+        "Repayment Amount": "USD 10,000,000.00",
+        "Deal CUSIP": "123456789",
+        "Deal ISIN": "US1234567890",
+        "Facility CUSIP": "987654321",
+        "Facility ISIN": "US9876543210",
+        "Lender MEI": "ABCD1234",
+        "Borrower": "John Cena L.P.",
+        "Previous Global Principal Balance": "USD 50,000,000.00",
+        "New Global Principal Balance": "USD 40,000,000.00",
+        "Recipient Bank Name": "Wells Fargo National Association",
+        "Recipient Bank ABA Number": "123456789",
+        "Recipient Bank Account No": "987654321",
+        "Recipient Bank Reference": "LOAN-123456",
+        "Term Option": "SOFR (UST)",
+        "Sender Bank Name": "Bank of America",
+        "Phone": "(123)-456-7890",
+        "Fax": "(987)-654-3210",
+        "Email": "loanprocessing@wellsfargo.com"
+    }
+}

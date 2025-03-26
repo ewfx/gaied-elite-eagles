@@ -1,0 +1,32 @@
+{
+    "Request Type": "Money Movement-Inbound",
+    "Sub-Request Type": "Principal",
+    "Assigned To": "Loan Processing Team",
+    "Summary": "Loan repayment of USD 10,000,000.00 for John Cena L.P. (Deal CUSIP: 123456789) effective 10-Nov-2023",
+    "Priority": "Medium",
+    "Description": "Notification of a loan repayment of USD 10,000,000.00 from John Cena L.P., effective 10-Nov-2023.  Confirmation of receipt and processing is requested.",
+    "Details": {
+        "Sender": "Bank of America <notifications@bofa.com>",
+        "Recipient": "Wells Fargo National Association <transactions@wellsfargo.com>",
+        "Subject": "Loan Repayment Notification - John Cena L.P.",
+        "Loan Repayment Date": "10-Nov-2023",
+        "Repayment Amount": "USD 10,000,000.00",
+        "Deal CUSIP": "123456789",
+        "Deal ISIN": "US1234567890",
+        "Facility CUSIP": "987654321",
+        "Facility ISIN": "US9876543210",
+        "Lender MEI": "ABCD1234",
+        "Borrower": "John Cena L.P.",
+        "Previous Global Principal Balance": "USD 50,000,000.00",
+        "New Global Principal Balance": "USD 40,000,000.00",
+        "Recipient Bank Name": "Wells Fargo National Association",
+        "Recipient Bank ABA Number": "123456789",
+        "Recipient Bank Account No": "987654321",
+        "Recipient Bank Reference": "LOAN-123456",
+        "Term Option": "SOFR (UST)",
+        "Sender Bank Name": "Bank of America",
+        "Phone": "(123)-456-7890",
+        "Fax": "(987)-654-3210",
+        "Email": "loanprocessing@wellsfargo.com"
+    }
+}
