@@ -20,9 +20,10 @@ This document provides a comprehensive guide for developers seeking to understan
 ## 🎥 Demo
 🔗 [Live Demo](#) (if applicable)  
 📹 [Video Demo](#) (if applicable)  
+
 🖼️ Screenshots:
 
-![Screenshot 1](link-to-image)
+![Screenshot](artifacts/arch/Email_Classifier_FlowDiagram.png)
 
 ## 💡 Inspiration
 What inspired you to create this project? Describe the problem you're solving.
@@ -38,6 +39,18 @@ Email Signature Detection: Identifies and extracts email signatures.  
 Confidence Score
 Key Attributes Extraction: Uses the Gemini API to extract specific data from the email body (dates, amounts, etc.).   
 Content Classification: Employs the Gemini API to classify emails into request types and sub request types.  
+
+Output:
+
+{
+  "Metadata": {"From": "sender@example.com", "To": "recipient@example.com", ...},
+  "Subject": "Request Details",
+  "Body": "Dear team, please process this request...",
+  "Signature": {"Signature Type": "Regards", "Signature Content": "Jane Doe"},
+  "Attributes": {"Transaction Date": "15-Mar-2025", "Amount": "USD 5000"},
+  "Request Type": "Document Request",
+  "Sub-Request Type": "Confirmation"
+}
 
 ## 🛠️ How We Built It
 ## Dependencies
