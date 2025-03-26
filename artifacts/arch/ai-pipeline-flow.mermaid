@@ -1,0 +1,28 @@
+sequenceDiagram
+    participant Input as Document Input
+    participant Extractor as Text & OCR Extractor
+    participant Metadata as Metadata Extractor
+    participant Gemini as Gemini AI
+    participant Classifier as Email Classifier
+    participant ServiceRequest as Service Request Generator
+    participant Output as Final Output
+
+    Input->>Extractor: Send document
+    Extractor->>Extractor: Extract text content
+    Extractor->>Extractor: Perform OCR on images
+    
+    Extractor->>Metadata: Combined text content
+    Metadata->>Metadata: Extract email metadata
+    Metadata->>Metadata: Detect signature
+    
+    Metadata->>Gemini: Send processed content
+    Gemini->>Classifier: Classify email type
+    Gemini->>Classifier: Extract key attributes
+    
+    Classifier->>ServiceRequest: Request type
+    Classifier->>ServiceRequest: Sub-request type
+    Classifier->>ServiceRequest: Extracted attributes
+    
+    ServiceRequest->>ServiceRequest: Generate intake request
+    ServiceRequest->>Output: Produce JSON output
+    ServiceRequest->>Output: Log processing details

@@ -1,0 +1,30 @@
+flowchart TB
+    A[Email/Document Input] --> B{File Type Detection}
+    B -->|EML| C[Email Parser]
+    B -->|PDF| D[PDF Text Extractor]
+    B -->|DOCX| E[DOCX Text Extractor]
+    
+    C --> F[Text Content Extraction]
+    D --> F
+    E --> F
+    
+    F --> G[OCR Image Processing]
+    G --> H[Combined Text Content]
+    
+    H --> I[Metadata Extraction]
+    H --> J[Signature Detection]
+    
+    I --> K[Gemini AI Classification]
+    J --> K
+    
+    K --> L[Request Type Identification]
+    K --> M[Attribute Extraction]
+    
+    L --> N[Service Intake Request Generator]
+    M --> N
+    
+    N --> O[JSON Output]
+    N --> P[Logging System]
+    
+    O --> Q[Team Routing]
+    P --> R[Monitoring & Audit Trail]
