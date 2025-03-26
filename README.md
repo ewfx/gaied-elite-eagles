@@ -113,11 +113,14 @@ The system outputs extracted data and classification results in JSON format.
 Describe the major technical or non-technical challenges your team encountered.
 
 ## 🏗️ Tech Stack
-- 🔹 Frontend: React / Vue / Angular
+- 🔹 Frontend: React/TailwindCSS
 - 🔹 Backend: Node.js / FastAPI / Django
-- 🔹 Database: PostgreSQL / Firebase
-- 🔹 Other: OpenAI API / Twilio / Stripe
+- 🔹 Database: MongoDB
+- 🔹 Other: Google Gemini/Open AI
 
 ## 👥 Team
-- **Your Name** - [GitHub](#) | [LinkedIn](#)
-- **Teammate 2** - [GitHub](#) | [LinkedIn](#)
+- **Syed Ahmed Ali**
+- **Konabhai Veera**
+- **Samaddar Satyendra**
+- **Bekkam Nagaraju**
+- **Challa BalaKishore**
