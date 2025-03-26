@@ -166,8 +166,6 @@ JSON Response : Email Classification
 JSOPN Response : Service Intake Request
 
 ```bash
-        Service Intake Response (from create_service_intake_request_gemini)
-        Service Intake Request:
         {
             "Request Type": "Money Movement-Inbound",
             "Sub-Request Type": "Principal",
