@@ -15,11 +15,12 @@
 # GenAI-Powered Email Processing System
 
 ## 🎯 Introduction
-This document provides a comprehensive guide for developers seeking to understand, utilize, and extend the AI-powered email processing system. The system is designed to extract key information from emails in various formats (.eml, .pdf, .docx) and classify them based on their content.
+This document provides a comprehensive guide for developers seeking to understand, utilize, and extend the AI-powered email processing system. The system is designed to extract key information from emails in various formats (.eml, .pdf, .docx) and classify them based on their content and create a service request and route the request to the respective teams or individuals based on skills and roles
 
 ## 🎥 Demo
 🔗 [Live Demo](#) (if applicable)  
-📹 [Video Demo](#) (if applicable)  
+📹 [Video Demo - PART 1](artifacts/demo/GenAI Email Classifier - Elite Eagles_PART1.mp4) 
+📹 [Video Demo -PART 2](artifacts/demo/GenAI Email Classifier - Elite Eagles_PART2.mp4)
 
 ## 🖼️ Screenshots:
 
