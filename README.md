@@ -1,15 +1,4 @@
-# 🚀 Project Name
-
-## 📌 Table of Contents
-- [Introduction](#introduction)
-- [Demo](#demo)
-- [Inspiration](#inspiration)
-- [What It Does](#what-it-does)
-- [How We Built It](#how-we-built-it)
-- [Challenges We Faced](#challenges-we-faced)
-- [How to Run](#how-to-run)
-- [Tech Stack](#tech-stack)
-- [Team](#team)
+# 🚀 InboxGenie - Your AI assistant for the inbox
 
 ---
 # GenAI-Powered Email Processing System
@@ -169,7 +158,7 @@ JSON Response : Email Classification
 }
 ```
 
-JSOPN Response : Service Intake Request
+JSON Response : Service Intake Request
 
 ```bash
         {
@@ -209,8 +198,6 @@ JSOPN Response : Service Intake Request
 
 * `genai_email_classifaction_engine.py`: Contains the main email processing logic.
 
-## 🚧 Challenges We Faced
-Describe the major technical or non-technical challenges your team encountered.
 
 ## 🏗️ Tech Stack
 - 🔹 Frontend: React/TailwindCSS
