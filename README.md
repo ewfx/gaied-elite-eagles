@@ -25,7 +25,8 @@ This document provides a comprehensive guide for developers seeking to understan
 
 ## 🖼️ Architecture Diagram:
 
-![Architecture Diagram](artifacts/arch/AI_Email_Pipeline_Flow.png)
+![Pipeline flow](artifacts/arch/AI_Email_Pipeline_Flow.png)
+![Code Architecture Map](artifacts/arch/Code_Architecture_Map.png)
 
 ## Screenshots PDF
 [Go to screenshots PDF](artifacts/arch/GenAI Email Classifier-UI Screenshots.pdf)
