@@ -23,9 +23,12 @@ This document provides a comprehensive guide for developers seeking to understan
 
 📹 [Video Demo -PART 2](Please refer : artifacts/demo/GenAI Email Classifier - Elite Eagles_PART2.mp4)
 
-## 🖼️ Screenshots:
+## 🖼️ Architecture Diagram:
 
-![Screenshot](artifacts/arch/Email_Classifier_FlowDiagram.png)
+![Architecture Diagram](artifacts/arch/Email_Processing_Architecture_diagram.png)
+
+## Screenshots PDF
+[Go to screenshots PDF](artifacts/arch/GenAI Email Classifier-UI Screenshots.pdf)
 
 ## 💡 Inspiration
 Business Description:
